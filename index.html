@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zapatería Evelyn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+
+<!-- SDK Oficial de EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        // Tu Public Key ya configurada
+        emailjs.init("knTqK0Dx9F8osIADd");
+    })();
+</script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Zapatería <span>Evelyn</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#categorias">Categorías</a></li>
+      <li><a href="#destacados">Destacados</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="#contacto" class="nav-cta">Visítanos</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <span class="hero-eyebrow">Nueva colección 2026</span>
+    <h1>Pisa fuerte con <span class="accent">Zapatería Evelyn</span></h1>
+    <p>Calzado para toda la familia: deportivo, casual y formal, con estilo, comodidad y los mejores precios de la ciudad.</p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="document.getElementById('destacados').scrollIntoView()">Ver colección</button>
+      <a href="#categorias" class="btn-secondary">Explorar categorías</a>
+    </div>
+  </div>
+
+  <div class="shoe-stage">
+    <div class="shoe-hint">¡Tócame!</div>
+    <div class="badge-pop" id="badgePop">-20% HOY</div>
+    <button class="shoe-btn" id="shoeBtn" aria-label="Presiona el zapato para ver la oferta">
+      <svg id="shoe-svg" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="200" cy="235" rx="170" ry="14" fill="#1B1B2F" opacity=".12"/>
+        <path d="M40 190 C40 150 70 140 100 138 L140 90 C150 78 168 72 182 76 L250 96 C270 60 320 55 355 85 C385 110 388 150 375 175 C365 195 340 205 300 205 L70 205 C52 205 40 200 40 190 Z" fill="#FF3E7F" stroke="#1B1B2F" stroke-width="6"/>
+        <path d="M140 90 L182 76 L250 96 L215 130 Z" fill="#FFD23F" stroke="#1B1B2F" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M100 138 C130 120 160 118 185 128 L215 130 L235 160 L100 160 Z" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6" stroke-linejoin="round"/>
+        <circle cx="150" cy="112" r="5" fill="#1B1B2F"/>
+        <circle cx="172" cy="104" r="5" fill="#1B1B2F"/>
+        <circle cx="194" cy="112" r="5" fill="#1B1B2F"/>
+        <path d="M148 118 L172 110 M170 108 L194 116" stroke="#1B1B2F" stroke-width="3" stroke-linecap="round"/>
+        <path d="M40 190 C40 150 70 140 100 138 L235 160 L300 205 L70 205 C52 205 40 200 40 190 Z" fill="#00C2A8" stroke="#1B1B2F" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M55 205 L60 225 M100 205 L105 225 M150 205 L155 225 M200 205 L205 225 M250 205 L255 225 M300 205 L305 222" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round"/>
+        <path d="M355 85 C385 110 388 150 375 175 C368 190 352 200 320 203 C340 180 342 130 305 100 C325 88 342 82 355 85 Z" fill="#6C3FC5" stroke="#1B1B2F" stroke-width="6" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>ENVÍO GRATIS</span> desde Q300 &nbsp;•&nbsp; <span>2X1</span> en sandalias esta semana &nbsp;•&nbsp; Nueva colección <span>infantil</span> &nbsp;•&nbsp; ENVÍO GRATIS <span>desde Q300</span> &nbsp;•&nbsp; <span>2X1</span> en sandalias esta semana &nbsp;•&nbsp; Nueva colección <span>infantil</span>
+  </div>
+</div>
+
+<section class="section categorias" id="categorias">
+  <div class="section-head center">
+    <span class="section-tag">Categorías</span>
+    <h2>Encuentra tu par ideal</h2>
+    <p>Un estilo para cada ocasión, en tallas para toda la familia.</p>
+  </div>
+  <div class="cat-grid">
+    <div class="cat-card"><div class="icon-circ">👟</div><h3>Deportivos</h3><p>Comodidad para correr y entrenar.</p></div>
+    <div class="cat-card"><div class="icon-circ">👞</div><h3>Formales</h3><p>Elegancia para la oficina y eventos.</p></div>
+    <div class="cat-card"><div class="icon-circ">🩴</div><h3>Casuales</h3><p>Estilo relajado para el día a día.</p></div>
+    <div class="cat-card"><div class="icon-circ">🧒</div><h3>Niños</h3><p>Diversión y resistencia para jugar.</p></div>
+  </div>
+</section>
+
+<section class="section" id="destacados" style="background:var(--yellow);">
+  <div class="section-head center">
+    <span class="section-tag" style="background:#1B1B2F22; color:#1B1B2F;">Lo más vendido</span>
+    <h2>Productos destacados</h2>
+    <p>Los favoritos de nuestros clientes esta temporada.</p>
+  </div>
+  <div class="prod-grid">
+
+    <div class="prod-card">
+      <div class="prod-img" style="background:#FFE0EC;">
+        <svg viewBox="0 0 200 120"><path d="M20 90 C20 70 35 65 50 64 L70 42 C76 35 86 32 94 34 L128 45 C140 25 168 22 186 40 C200 54 202 76 194 90 C188 100 174 105 152 105 L36 105 C26 105 20 96 20 90 Z" fill="#FF3E7F" stroke="#1B1B2F" stroke-width="4"/></svg>
+      </div>
+      <div class="prod-info">
+        <span class="tag">Deportivo</span>
+        <h3>Runner Rosa Evelyn</h3>
+        <div class="prod-price">
+          <div><span class="old">Q399</span><strong>Q319</strong></div>
+          <button class="add-btn">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-img" style="background:#E0FAF6;">
+        <svg viewBox="0 0 200 120"><path d="M20 90 C20 70 35 65 50 64 L70 42 C76 35 86 32 94 34 L128 45 C140 25 168 22 186 40 C200 54 202 76 194 90 C188 100 174 105 152 105 L36 105 C26 105 20 96 20 90 Z" fill="#00C2A8" stroke="#1B1B2F" stroke-width="4"/></svg>
+      </div>
+      <div class="prod-info">
+        <span class="tag">Casual</span>
+        <h3>Urban Teal Comfort</h3>
+        <div class="prod-price">
+          <div><strong>Q279</strong></div>
+          <button class="add-btn">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-img" style="background:#EDE3FF;">
+        <svg viewBox="0 0 200 120"><path d="M20 90 C20 70 35 65 50 64 L70 42 C76 35 86 32 94 34 L128 45 C140 25 168 22 186 40 C200 54 202 76 194 90 C188 100 174 105 152 105 L36 105 C26 105 20 96 20 90 Z" fill="#6C3FC5" stroke="#1B1B2F" stroke-width="4"/></svg>
+      </div>
+      <div class="prod-info">
+        <span class="tag">Formal</span>
+        <h3>Clásico Violeta Oxford</h3>
+        <div class="prod-price">
+          <div><span class="old">Q459</span><strong>Q389</strong></div>
+          <button class="add-btn">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section about" id="nosotros">
+  <div class="wrap">
+    <div class="about-text">
+      <h2>Más de 15 años calzando a Guatemala</h2>
+      <p>En Zapatería Evelyn creemos que un buen par de zapatos cambia tu día. Seleccionamos cada modelo pensando en calidad, comodidad y precio justo.</p>
+      <p>Atención cercana, asesoría de talla y garantía en todos nuestros productos.</p>
+      <div class="stats">
+        <div class="stat-box"><div class="stat-num" data-target="15">0</div><div class="stat-label">Años de experiencia</div></div>
+        <div class="stat-box"><div class="stat-num" data-target="8000">0</div><div class="stat-label">Clientes felices</div></div>
+        <div class="stat-box"><div class="stat-num" data-target="120">0</div><div class="stat-label">Modelos disponibles</div></div>
+      </div>
+    </div>
+    <div>
+      <svg viewBox="0 0 400 300" style="width:100%;">
+        <rect x="20" y="20" width="360" height="260" rx="24" fill="#ffffff14"/>
+        <path d="M70 190 C70 160 95 150 120 148 L155 108 C163 98 178 92 190 96 L245 112 C262 78 310 72 340 100 C365 122 368 156 356 180 C348 198 328 208 296 208 L100 208 C82 208 70 200 70 190 Z" fill="#FFD23F" stroke="#1B1B2F" stroke-width="6"/>
+        <path d="M155 108 L190 96 L245 112 L215 138 Z" fill="#FF3E7F" stroke="#1B1B2F" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M70 190 L296 208 L356 180 C348 198 328 208 296 208 L100 208 C82 208 70 200 70 190 Z" fill="#00C2A8" stroke="#1B1B2F" stroke-width="6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section testi" id="opiniones">
+  <div class="section-head center">
+    <span class="section-tag">Opiniones</span>
+    <h2>Lo que dicen nuestros clientes</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>Excelente atención y variedad. Encontré el par perfecto para mi graduación en minutos.</p>
+      <div class="testi-user"><div class="testi-avatar">M</div><div><strong>María A.</strong><span>Cliente frecuente</span></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>Los precios son justos y la calidad se nota. Ya es mi tienda de confianza para toda la familia.</p>
+      <div class="testi-user"><div class="testi-avatar">J</div><div><strong>Justin D.</strong><span>Cliente frecuente</span></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>Compré zapatos deportivos para mis hijos y duraron muchísimo. Totalmente recomendados.</p>
+      <div class="testi-user"><div class="testi-avatar">L</div><div><strong>Angelica C.</strong><span>Mamá de dos</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section contacto" id="contacto">
+  <div class="wrap">
+    <div>
+      <h2>Visítanos o escríbenos</h2>
+      <p>Estamos listos para ayudarte a encontrar tu próximo par favorito.</p>
+      <div class="info-row"><div class="ic">📍</div> Zona 1, San Juan Sacatepéquez</div>
+      <div class="info-row"><div class="ic">📞</div> +502 5899 4304</div>
+      <div class="info-row"><div class="ic">🕒</div> Lunes a sábado, 9:00 – 16:00</div>
+    </div>
+    <form id="contactForm">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="correo" placeholder="Tu correo" required>
+      <textarea name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+      <button type="submit" id="btnSubmit">Enviar mensaje</button>
+      <div class="form-msg" id="formMsg"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2026 Zapatería <span>Evelyn</span>. Todos los derechos reservados.
+</footer>
+
+<script src="java.js"></script>
+
+<!-- Script para procesar el envío mediante EmailJS -->
+<script>
+  const contactForm = document.getElementById('contactForm');
+  const btnSubmit = document.getElementById('btnSubmit');
+  const formMsg = document.getElementById('formMsg');
+
+  contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      btnSubmit.textContent = 'Enviando...';
+      formMsg.textContent = '';
+
+      const serviceID = 'service_4huu4hb';
+      const templateID = 'template_vqf1mpv';
+      const publicKey = 'knTqK0Dx9F8osIADd';
+
+      emailjs.sendForm(serviceID, templateID, this, publicKey)
+          .then(() => {
+              btnSubmit.textContent = 'Enviar mensaje';
+              formMsg.textContent = '¡Mensaje enviado con éxito! Te responderemos pronto.';
+              formMsg.style.color = '#00C2A8';
+              this.reset();
+          }, (err) => {
+              btnSubmit.textContent = 'Enviar mensaje';
+              formMsg.textContent = 'Error al enviar el mensaje. Inténtalo de nuevo.';
+              formMsg.style.color = '#FF3E7F';
+              console.error('EmailJS Error:', err);
+          });
+  });
+</script>
+
+</body>
+</html>
