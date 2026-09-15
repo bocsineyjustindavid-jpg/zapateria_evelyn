@@ -362,3 +362,29 @@
     .badge-pop{ width: 75px; height: 75px; font-size: 0.65rem; }
     .hero h1{ font-size: 2rem; }
   }
+
+  /* CORRECCIÓN DE DESBORDAMIENTO EN MÓVIL */
+.contacto {
+  width: 100%;
+  overflow: hidden;
+}
+
+.contacto .wrap {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+form input, 
+form textarea,
+form button {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
